@@ -13,7 +13,7 @@
 1. Download the script 
   * You can use either Git or manually download the zipfile
   * If you are using Git, then download it with
-            git clone https://github.com/lbarberiscanoni/speechConverter.git
+                git clone https://github.com/lbarberiscanoni/speechConverter.git
 2. Put the script in the folder where the speeches you want to convert are 
   * This is somewhere in the Dropbox folder
 
