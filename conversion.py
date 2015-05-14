@@ -16,7 +16,7 @@ speechName = date + speechTitle + ".markdown"
 subprocess.call("w2m " + fileName + " >>" + speechName, shell=True)
 
 # build the front matter and add it to the .markdown file
-n_of_tags = input("HOW MANY topic areas does your speech fit in?\n The options are:\n Constitutional Law (conlaw)\n, Counterplans (counterplan)\n, Domestic (domestic)\n, Economics (econ)\n, Foreign Policy (foreign)\n, Philosophical (philosophical)\n \nEnter the number (as a number and not a word) here :")
+n_of_tags = input("HOW MANY topic areas does your speech fit in?\n The options are:\n Constitutional Law (conlaw)\n, Counterplans (counterplan)\n, Domestic (domestic)\n, Economics (econ)\n, Foreign Policy (foreign)\n, Philosophical (philosophical)\n \nEnter the NUMBER (as a number and not a word) here :")
 time.sleep(1)
 
 tags = []
@@ -26,17 +26,17 @@ for i in range(int(n_of_tags)):
     time.sleep(1)
 
 if raw_input("Are you Joe, Sarai, Michael, or Will?\n Type y for yes or n for no: ") == "y":
-    regular_user = raw_input("Type your name without capital letters : ")
-    if regular_user == "joe":
+    regular_user = raw_input("Type your name : ")
+    if regular_user == "joe" or regular_user == "Joe":
         name = "Joe"
         last_name = "Gunst"
-    elif regular_user == "sarai":
+    elif regular_user == "sarai" or regular_user == "Sarai":
         name = "Sarai"
         last_name = "Dai"
-    elif regular_user == "lorenzo":
+    elif regular_user == "lorenzo" or regular_user == "Lorenzo":
         name = "Lorenzo"
         last_name = "Barberis-Canonico"
-    elif regular_user == "will":
+    elif regular_user == "will" or regular_user == "Will":
         name = "Will"
         last_name = "Tapp"
     else:
