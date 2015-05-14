@@ -25,8 +25,27 @@ for i in range(int(n_of_tags)):
     tags.append(choice)
     time.sleep(1)
 
-name = raw_input("\nwhat is your name? (capitalize the first letter): ")
-last_name = raw_input("\nwhat is your last name? (1 word limit and capitalize the first letter): ")
+if raw_input("Are you Joe, Sarai, Michael, or Will?\n Type y for yes or n for no: ") == "y":
+    regular_user = raw_input("Type your name without capital letters : ")
+    if regular_user == "joe":
+        name = "Joe"
+        last_name = "Gunst"
+    elif regular_user == "sarai":
+        name = "Sarai"
+        last_name = "Dai"
+    elif regular_user == "lorenzo":
+        name = "Lorenzo"
+        last_name = "Barberis-Canonico"
+    elif regular_user == "will":
+        name = "Will"
+        last_name = "Tapp"
+    else:
+        name = "Michael"
+        last_name = "Gallagher"
+else:
+    name = raw_input("\nwhat is your name? (capitalize the first letter): ")
+    last_name = raw_input("\nwhat is your last name? (1 word limit and capitalize the first letter): ")
+
 authorID = name + "-" + last_name
 
 with open(speechName, "r") as file:
