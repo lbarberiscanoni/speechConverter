@@ -5,7 +5,8 @@ import shlex
 import time
 
 # convert .docx into .markdown 
-fileName = raw_input("Type the name of the file EXACTLY and include the file extension\n \nIf there are spaces, the use \ between each word\n \nExample: GMOs Neg.docx = GMOs\ Neg.docx\n \nEnter Here: ")
+fileName = raw_input("Type the name of the file EXACTLY\n \nIf there are spaces, the use \ between each word\n \nExample: GMOs Neg = GMOs\ Neg\n \nEnter Here: ")
+docName = fileName + ".docx"
 year = raw_input("\nwhat year is it? Please use 4 numbers\n :")
 month = raw_input("\nwhat month is it? Please use 2 numbers\n :")
 day = raw_input("\nwhat day of the month is it? please use 2 numbers\n :")
@@ -13,7 +14,7 @@ date = year + "-" + month + "-" + day + "-"
 speechTitle = raw_input("\ngive title to this speech, WITHOUT USING CAPITAL LETTERS and using - between each word\n :")
 speechName = date + speechTitle + ".markdown"
 
-subprocess.call("w2m " + fileName + " >>" + speechName, shell=True)
+subprocess.call("w2m " + docName + " >>" + speechName, shell=True)
 
 # build the front matter and add it to the .markdown file
 n_of_tags = input("HOW MANY topic areas does your speech fit in?\n The options are:\n Constitutional Law (conlaw)\n, Counterplans (counterplan)\n, Domestic (domestic)\n, Economics (econ)\n, Foreign Policy (foreign)\n, Philosophical (philosophical)\n \nEnter the NUMBER (as a number and not a word) here :")
